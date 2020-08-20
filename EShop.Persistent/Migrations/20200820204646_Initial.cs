@@ -132,6 +132,7 @@ namespace EShop.Persistent.Migrations
                 columns: table => new
                 {
                     ProductID = table.Column<int>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
                     Price = table.Column<decimal>(nullable: false),
                     StockQuantity = table.Column<int>(nullable: false)
                 },

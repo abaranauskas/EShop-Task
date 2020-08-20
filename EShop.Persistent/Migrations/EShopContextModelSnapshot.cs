@@ -110,6 +110,9 @@ namespace EShop.Persistent.Migrations
                         .HasColumnName("ProductID")
                         .HasColumnType("int");
 
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 

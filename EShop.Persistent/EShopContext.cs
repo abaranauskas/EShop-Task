@@ -36,6 +36,7 @@ namespace EShop.Persistent
                 x.ToTable("Products").HasKey(p => p.Id);
                 x.Property(p => p.Id).HasColumnName("ProductID");
                 x.Property(p => p.StockQuantity);
+                x.Property(p => p.Name);
                 x.Property(p => p.Price);
                 x.HasMany(p => p.PrciceStamps).WithOne();
                 x.HasMany(p => p.ProductSuppliers).WithOne(ps => ps.Product);

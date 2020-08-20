@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EShop.Persistent.Migrations
 {
     [DbContext(typeof(EShopContext))]
-    [Migration("20200819211505_Initial")]
+    [Migration("20200820204646_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -111,6 +111,9 @@ namespace EShop.Persistent.Migrations
                     b.Property<int>("Id")
                         .HasColumnName("ProductID")
                         .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
